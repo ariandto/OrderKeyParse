@@ -112,6 +112,7 @@ namespace OrderKeyParse
             {
                 richTextBox1.Text = "";
                 richTextBox2.Text = "";
+
             }
         }
 
