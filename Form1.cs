@@ -75,14 +75,6 @@ namespace OrderKeyParse
 
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            Form2 frm = new Form2();
-            frm.TopMost = true;
-            frm.Show();
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string message = "Tidak Bisa Copy ke Clipboard karena kosong || Cannot copy string into your Clipboard";
@@ -119,6 +111,12 @@ namespace OrderKeyParse
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void masterJalurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();
         }
     }
  }

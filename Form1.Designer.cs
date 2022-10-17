@@ -182,8 +182,9 @@
             // masterJalurToolStripMenuItem
             // 
             this.masterJalurToolStripMenuItem.Name = "masterJalurToolStripMenuItem";
-            this.masterJalurToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.masterJalurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.masterJalurToolStripMenuItem.Text = "Master Jalur";
+            this.masterJalurToolStripMenuItem.Click += new System.EventHandler(this.masterJalurToolStripMenuItem_Click);
             // 
             // utilityToolStripMenuItem
             // 
