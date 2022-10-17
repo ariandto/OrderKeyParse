@@ -55,8 +55,10 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(24, 64);
+            this.dataGridView1.MaximumSize = new System.Drawing.Size(1200, 800);
+            this.dataGridView1.MinimumSize = new System.Drawing.Size(1200, 800);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(930, 385);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 800);
             this.dataGridView1.TabIndex = 8;
             // 
             // label1
@@ -72,7 +74,7 @@
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(780, 22);
+            this.searchTextBox.Location = new System.Drawing.Point(1050, 35);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(174, 20);
             this.searchTextBox.TabIndex = 10;
@@ -81,16 +83,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(668, 28);
+            this.label3.Location = new System.Drawing.Point(947, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Search Keyword";
+            this.label3.Text = "Search Keywords";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(844, 9);
+            this.radioButton1.Location = new System.Drawing.Point(1114, 9);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(110, 17);
             this.radioButton1.TabIndex = 12;
@@ -103,17 +106,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 495);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.MaximumSize = new System.Drawing.Size(1024, 720);
+            this.MaximumSize = new System.Drawing.Size(1386, 1024);
             this.MinimumSize = new System.Drawing.Size(720, 360);
             this.Name = "Form2";
-            this.Text = "TestTextBox";
+            this.Text = "MasterJalur";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

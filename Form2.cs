@@ -17,8 +17,16 @@ namespace OrderKeyParse
         {
             InitializeComponent();
             radioButton1.Checked = true;
+
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // hide max,min and close button at top right of Window
+            this.FormBorderStyle = FormBorderStyle.None;
+            // fill the screen
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -34,9 +42,9 @@ namespace OrderKeyParse
             {
                 if (radioButton1.Checked == true)
                 {
-                    const string filename = @"D:\SQLITEDB\klsroute.db";
+                    //const string filename = @".\klsroute.db";
                     const string sql = "select * from routingan;";
-                    var conn = new SQLiteConnection("Data Source=" + filename + ";Version=3;");
+                    var conn = new SQLiteConnection("Data Source= klsroute.db;Version=3;New=False;Compress=True;");
                     conn.Open();
                     DataSet ds = new DataSet();
                     var da = new SQLiteDataAdapter(sql, conn);
@@ -56,26 +64,31 @@ namespace OrderKeyParse
 
         private void CheckEnter(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)13)
-            {
-                //string message = "ENTER WAS PRESSED";
-                //MessageBox.Show(message);
-                //const string filename = @"D:\SQLITEDB\klsroute.db";
-                //var commandcmd = new SQLiteCommand();
-                //var ds = new DataSet();
-                //var da = new SQLiteDataAdapter();
-                //const string sql = "select * from routingan;";
-                //var conn = new SQLiteConnection("Data Source=" + filename + ";Version=3;");
-                //conn.Open();
-                //commandcmd = new SQLiteCommand("SELECT * FROM routingan where area like '%" + searchTextBox.Text, conn);
-                //ds = new DataSet();
-                //da = new SQLiteDataAdapter(commandcmd);
-                //da.Fill(ds);
-                .//dataGridView1.DataSource = ds.Tables[0].DefaultView;
-                //this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                //this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                //this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
+            //if (e.KeyChar == (char)13)
+            //{
+            //string message = "ENTER WAS PRESSED";
+            //MessageBox.Show(message);
+            //const string filename = @"D:\SQLITEDB\klsroute.db";
+            //var commandcmd = new SQLiteCommand();
+            //var ds = new DataSet();
+            //var da = new SQLiteDataAdapter();
+            //const string sql = "select * from routingan;";
+            //var conn = new SQLiteConnection("Data Source=" + filename + ";Version=3;");
+            //conn.Open();
+            //commandcmd = new SQLiteCommand("SELECT * FROM routingan where area like '%" + searchTextBox.Text, conn);
+            //ds = new DataSet();
+            //da = new SQLiteDataAdapter(commandcmd);
+            //da.Fill(ds);
+            //dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            //this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //}
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
